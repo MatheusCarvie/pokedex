@@ -1,4 +1,6 @@
 import "./my_button.css";
+import uiClick from "../assets/ui-click.wav";
+import { Howl } from "howler";
 
 type buttonTypes = {
     text: string,
@@ -6,7 +8,16 @@ type buttonTypes = {
 }
 
 export default function MyButton({ text, onClick }: buttonTypes) {
+    const sound = new Howl({
+        src: [uiClick],
+        loop: false,
+        volume: 0.5,
+    });
+
     return (
-        <button className="my_button" onClick={onClick}>{text}</button>
+        <button className="my_button" onClick={() => {
+            sound.play();
+            onClick();
+        }}>{text}</button>
     )
 }

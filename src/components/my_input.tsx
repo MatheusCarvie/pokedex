@@ -1,5 +1,7 @@
 import "./my_input.css";
 import { useRef } from "react";
+import { Howl } from "howler";
+import uiClick from "../assets/ui-click.wav";
 
 type inputTypes = {
     type?: string,
@@ -23,9 +25,16 @@ export default function MyInput({ type = "text", placeholder, value, onKeyDown, 
     const handleClick = () => {
         if (inputRef.current && onReset) {
             inputRef.current.value = "";
+            sound.play();
             onReset();
         }
     }
+
+    const sound = new Howl({
+        src: [uiClick],
+        loop: false,
+        volume: 0.5,
+    });
 
     return (
         <div className="my_input">
