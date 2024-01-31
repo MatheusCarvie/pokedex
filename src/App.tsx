@@ -77,23 +77,31 @@ export default function App() {
   const changToken = ({ action }: changTokenTypes) => {
     if (pokemonObj && action) {
       if (action == "increase") {
-        const currentID = parseInt(pokemonObj.id);
-        if (currentID < limitToken) {
-          const newId = currentID + 1;
-          setPokemonToken(newId.toString());
+        if (errorSearch == "Não encontrado") {
+          setPokemonToken("1");
+        } else {
+          const currentID = parseInt(pokemonObj.id);
+          if (currentID < limitToken) {
+            const newId = currentID + 1;
+            setPokemonToken(newId.toString());
+          }
         }
       } else if (action == "decrease") {
-        const currentID = parseInt(pokemonObj.id);
-        if (currentID > 1) {
-          const newId = currentID - 1;
-          setPokemonToken(newId.toString());
+        if (errorSearch == "Não encontrado") {
+          setPokemonToken("1");
+        } else {
+          const currentID = parseInt(pokemonObj.id);
+          if (currentID > 1) {
+            const newId = currentID - 1;
+            setPokemonToken(newId.toString());
+          }
         }
       }
     }
   }
 
   const overrideSpinners: CSSProperties = {
-    top: "38%",
+    bottom: "20%",
     position: "absolute",
     zIndex: "10"
   };
@@ -110,32 +118,29 @@ export default function App() {
               {errorSearch && <h1 id="pokemon_info">{`${errorSearch}`}</h1>}
             </div>
           )}
-          <RiseLoader color="#d30a40" loading={isLoading} size={10} cssOverride={overrideSpinners} />
-          <div id="pokedex_bottom">
-            <MyInput
-              type="search"
-              placeholder="Insira o token"
-              hide={isLoading}
-              onReset={() => {
-                setPokemonToken("1");
-              }}
-              onKeyDown={(value, event) => {
-                if (event.key === "Enter" && value) {
-                  const currentValue: string = value;
-                  setPokemonToken(currentValue);
-                }
-              }}
-            />
-            {!isLoading && (
-              <>
-                <div id="line_button">
-                  <MyButton text="<" onClick={() => changToken({ action: "decrease" })} />
-                  <MyButton text=">" onClick={() => changToken({ action: "increase" })} />
-                </div>
-              </>
-            )
-            }
-          </div>
+          <RiseLoader color="white" loading={isLoading} size={10} cssOverride={overrideSpinners} />
+          {!isLoading && (
+            <div id="pokedex_bottom">
+              <MyInput
+                type="search"
+                placeholder="Insira o token"
+                hide={isLoading}
+                onReset={() => {
+                  setPokemonToken("1");
+                }}
+                onKeyDown={(value, event) => {
+                  if (event.key === "Enter" && value) {
+                    const currentValue: string = value;
+                    setPokemonToken(currentValue);
+                  }
+                }}
+              />
+              <div id="line_button">
+                <MyButton text="<" onClick={() => changToken({ action: "decrease" })} />
+                <MyButton text=">" onClick={() => changToken({ action: "increase" })} />
+              </div>
+            </div>
+          )}
         </div>
       </main>
     </div>
