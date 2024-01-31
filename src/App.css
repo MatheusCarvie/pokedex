@@ -10,7 +10,7 @@
 
 #app_body main #pokedex {
   width: 30vw;
-  height: 90vh;
+  height: 80vh;
   position: relative;
   display: flex;
   justify-content: center;
@@ -90,6 +90,11 @@
 @media (max-width: 1300px) {
   #app_body main #pokedex {
     width: 40vw;
+    height: 80vh;
+  }
+
+  #app_body main #pokedex #pokedex_bottom #line_button {
+    margin-top: 40px;
   }
 }
 
@@ -105,7 +110,8 @@
 
 @media (max-width: 850px) {
   #app_body main #pokedex {
-    width: 60vw;
+    width: 50vw;
+    height: 70vh;
   }
 
   #app_body main #pokedex #pokedex_box #pokemon_info {
@@ -123,13 +129,14 @@
 
 @media (max-width: 650px) {
   #app_body main #pokedex {
-    width: 80vw;
+    width: 70vw;
   }
 }
 
 @media (max-width: 450px) {
   #app_body main #pokedex {
-    width: 90vw;
+    width: 80vw;
+    height: 60vh;
   }
 
   #app_body main #pokedex #pokedex_bottom .my_input input {
@@ -143,7 +150,7 @@
   }
 
   #app_body main #pokedex #pokedex_bottom #line_button {
-    margin-top: 20px;
+    margin-top: 30px;
   }
 
   #app_body main #pokedex #pokedex_bottom .my_button {
@@ -154,7 +161,12 @@
 
 @media (max-width: 350px) {
   #app_body main #pokedex {
-    height: 70vh;
+    width: 90vw;
+    height: 50vh;
+  }
+
+  #app_body main #pokedex #pokedex_bottom #line_button {
+    margin-top: 20px;
   }
 
   #app_body main #pokedex #pokedex_box #pokemon_info {
