@@ -9,8 +9,9 @@
 }
 
 #app_body main #pokedex {
-  width: 30vw;
+  width: clamp(40vw, 60vw);
   height: 80vh;
+  max-height: 440px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -47,20 +48,18 @@
 #app_body main #pokedex #pokedex_box #pokemon_info {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
   align-items: center;
+  justify-content: flex-end;
   position: absolute;
-  font-size: 12px;
-  text-transform: capitalize;
-  bottom: 5%;
-  width: 85%;
-  height: 30px;
-  right: 12px;
-  color: rgb(56, 56, 56);
-  font-family: "Sixtyfour", sans-serif;
+  bottom: 1%;
+  right: 5%;
+  width: 80%;
+  height: 18%;
+  font-size: 16px;
+  color: #383838;
   text-align: center;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  font-family: "Sixtyfour", sans-serif;
+  text-transform: capitalize;
 }
 
 #app_body main #pokedex #pokedex_bottom {
@@ -73,8 +72,10 @@
   left: 9.5%;
   top: 65%;
   width: 72%;
+  height: 30%;
   z-index: 2;
   padding: 10px;
+  border: 1px solid #00a2ff;
 }
 
 #app_body main #pokedex #pokedex_bottom #line_button {
@@ -83,94 +84,118 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin-top: 35px;
+  margin-top: 25%;
   gap: 14px;
 }
 
-@media (max-width: 1300px) {
-  #app_body main #pokedex {
-    width: 40vw;
-    height: 80vh;
+
+/* @media (min-width: 1500px) {
+  #app_body main #pokedex #pokedex_bottom .my_input input::placeholder {
+    font-size: 16px;
+  }
+
+  #app_body main #pokedex #pokedex_bottom .my_input input {
+    font-size: 16px;
+    padding: 20px 8px;
+  }
+
+  #app_body main #pokedex #pokedex_bottom .my_input .clear {
+    font-size: 22px;
+    font-weight: 900;
+    top: 30px;
   }
 
   #app_body main #pokedex #pokedex_bottom #line_button {
-    margin-top: 40px;
-  }
-}
-
-@media (max-width: 1000px) {
-  #app_body main #pokedex {
-    width: 50vw;
+    margin-top: 20%;
+    gap: 20px;
   }
 
-  #app_body main #pokedex #pokedex_box #pokemon_info {
-    font-size: 11px;
+  #app_body main #pokedex #pokedex_bottom #line_button .my_button {
+    height: 60px;
+    font-size: 14px;
   }
-}
+} */
 
-@media (max-width: 850px) {
-  #app_body main #pokedex {
-    width: 50vw;
-    height: 70vh;
+@media (min-width: 1200px) {
+  #app_body main #pokedex #pokedex_bottom #line_button {
+    margin-top: 10%;
   }
 
   #app_body main #pokedex #pokedex_box #pokemon_info {
+    font-size: 14px;
+  }
+
+  #app_body main #pokedex #pokedex_bottom .my_input input::placeholder {
+    font-size: 13px;
+  }
+
+  #app_body main #pokedex #pokedex_bottom .my_input input {
+    font-size: 13px;
+  }
+
+  #app_body main #pokedex #pokedex_bottom #line_button {
+    margin-top: 12%;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  #app_body main #pokedex #pokedex_box #pokemon_info {
+    font-size: 12px;
+  }
+
+  #app_body main #pokedex #pokedex_bottom .my_input input::placeholder {
     font-size: 10px;
   }
 
   #app_body main #pokedex #pokedex_bottom .my_input input {
-    font-size: 12px;
-  }
-
-  #app_body main #pokedex #pokedex_bottom .my_button {
-    width: 50%;
-  }
-}
-
-@media (max-width: 650px) {
-  #app_body main #pokedex {
-    width: 70vw;
-  }
-}
-
-@media (max-width: 450px) {
-  #app_body main #pokedex {
-    width: 80vw;
-    height: 60vh;
-  }
-
-  #app_body main #pokedex #pokedex_bottom .my_input input {
-    font-size: 8px;
+    font-size: 10px;
   }
 
   #app_body main #pokedex #pokedex_bottom .my_input .clear {
-    top: 22px;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 900;
+    top: 23px;
   }
 
   #app_body main #pokedex #pokedex_bottom #line_button {
-    margin-top: 30px;
+    margin-top: 12%;
+    gap: 20px;
   }
 
-  #app_body main #pokedex #pokedex_bottom .my_button {
-    width: 40%;
+}
+
+@media (max-width: 900px) {
+  #app_body main #pokedex #pokedex_box #pokemon_info {
+    font-size: 10px;
+  }
+
+  #app_body main #pokedex #pokedex_bottom .my_input input::placeholder {
+    font-size: 9px;
+  }
+
+  #app_body main #pokedex #pokedex_bottom .my_input input {
+    font-size: 9px;
+  }
+
+  #app_body main #pokedex #pokedex_bottom #line_button {
+    margin-top: 15%;
+    gap: 30px;
+  }
+
+  #app_body main #pokedex #pokedex_bottom #line_button .my_button {
     height: 30px;
+    font-size: 10px;
   }
 }
 
 @media (max-width: 350px) {
   #app_body main #pokedex {
     width: 90vw;
-    height: 50vh;
   }
 
   #app_body main #pokedex #pokedex_bottom #line_button {
-    margin-top: 20px;
-  }
-
-  #app_body main #pokedex #pokedex_box #pokemon_info {
-    font-size: 8px;
-    bottom: 2%;
+    margin-top: 18%;
+    gap: 20px;
   }
 }
