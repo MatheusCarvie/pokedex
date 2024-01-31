@@ -6,7 +6,7 @@ import MyInput from "./components/my_input";
 import MyButton from "./components/my_button";
 import { RiseLoader } from 'react-spinners';
 import { CSSProperties } from "react";
-import { Howl, Howler } from 'howler';
+import { Howl } from 'howler';
 import bit_music from "./assets/8bit-music.wav";
 
 type pokemonTypes = {
