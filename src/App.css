@@ -9,7 +9,7 @@
 }
 
 #app_body main #pokedex {
-  width: clamp(40vw, 60vw);
+  width: 30vw;
   height: 80vh;
   max-height: 440px;
   position: relative;

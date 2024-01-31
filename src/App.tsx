@@ -41,13 +41,27 @@ export default function App() {
   const backgroundSound = new Howl({
     src: [bit_music],
     loop: true,
-    volume: 0.2,
+    volume: 0.3,
   });
 
   useEffect(() => {
-    backgroundSound.stop();
     backgroundSound.play();
-  }, [])
+
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === 'hidden') {
+        backgroundSound.stop();
+      } else {
+        backgroundSound.play();
+      }
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
+    return () => {
+      backgroundSound.stop();
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+    };
+  }, []);
 
   useEffect(() => {
     setIsLoading(true);
