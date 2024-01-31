@@ -111,6 +111,10 @@
 }
 
 @media (max-width: 1200px) {
+  #app_body main #pokedex {
+    width: 40vw;
+  }
+
   #app_body main #pokedex #pokedex_box #pokemon_info {
     font-size: 12px;
   }
@@ -137,6 +141,10 @@
 }
 
 @media (max-width: 900px) {
+  #app_body main #pokedex {
+    width: 50vw;
+  }
+
   #app_body main #pokedex #pokedex_box #pokemon_info {
     font-size: 10px;
   }
@@ -157,6 +165,18 @@
   #app_body main #pokedex #pokedex_bottom #line_button .my_button {
     height: 30px;
     font-size: 10px;
+  }
+}
+
+@media (max-width: 650px) {
+  #app_body main #pokedex {
+    width: 70vw;
+  }
+}
+
+@media (max-width: 400px) {
+  #app_body main #pokedex {
+    width: 80vw;
   }
 }
 
