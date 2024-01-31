@@ -1,0 +1,164 @@
+#app_body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to top, white, #00a2ff);
+}
+
+#app_body main #pokedex {
+  width: 30vw;
+  height: 90vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#app_body main #pokedex #pokedex_img {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  user-select: none;
+}
+
+#app_body main #pokedex #pokedex_box {
+  left: 9.5%;
+  top: 22%;
+  width: 72%;
+  height: 40%;
+  z-index: 2;
+  user-select: none;
+  pointer-events: none;
+  position: absolute;
+}
+
+#app_body main #pokedex #pokedex_box #pokemon_img {
+  position: relative;
+  width: 24%;
+  height: 24%;
+  top: 48%;
+  left: 40%;
+}
+
+#app_body main #pokedex #pokedex_box #pokemon_info {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  position: absolute;
+  font-size: 12px;
+  text-transform: capitalize;
+  bottom: 5%;
+  width: 85%;
+  height: 30px;
+  right: 12px;
+  color: rgb(56, 56, 56);
+  font-family: "Sixtyfour", sans-serif;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#app_body main #pokedex #pokedex_bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  position: absolute;
+  user-select: none;
+  left: 9.5%;
+  top: 65%;
+  width: 72%;
+  z-index: 2;
+  padding: 10px;
+}
+
+#app_body main #pokedex #pokedex_bottom #line_button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 35px;
+  gap: 14px;
+}
+
+@media (max-width: 1300px) {
+  #app_body main #pokedex {
+    width: 40vw;
+  }
+}
+
+@media (max-width: 1000px) {
+  #app_body main #pokedex {
+    width: 50vw;
+  }
+
+  #app_body main #pokedex #pokedex_box #pokemon_info {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 850px) {
+  #app_body main #pokedex {
+    width: 60vw;
+  }
+
+  #app_body main #pokedex #pokedex_box #pokemon_info {
+    font-size: 10px;
+  }
+
+  #app_body main #pokedex #pokedex_bottom .my_input input {
+    font-size: 12px;
+  }
+
+  #app_body main #pokedex #pokedex_bottom .my_button {
+    width: 50%;
+  }
+}
+
+@media (max-width: 650px) {
+  #app_body main #pokedex {
+    width: 80vw;
+  }
+}
+
+@media (max-width: 450px) {
+  #app_body main #pokedex {
+    width: 90vw;
+  }
+
+  #app_body main #pokedex #pokedex_bottom .my_input input {
+    font-size: 8px;
+  }
+
+  #app_body main #pokedex #pokedex_bottom .my_input .clear {
+    top: 22px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  #app_body main #pokedex #pokedex_bottom #line_button {
+    margin-top: 20px;
+  }
+
+  #app_body main #pokedex #pokedex_bottom .my_button {
+    width: 40%;
+    height: 30px;
+  }
+}
+
+@media (max-width: 350px) {
+  #app_body main #pokedex {
+    height: 70vh;
+  }
+
+  #app_body main #pokedex #pokedex_box #pokemon_info {
+    font-size: 8px;
+    bottom: 2%;
+  }
+}
