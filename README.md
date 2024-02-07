@@ -5,7 +5,7 @@
 ![Blog](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![Blog](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
-[![pokedex_banner](https://github.com/MatheusCarvie/pokedex/assets/89232821/0a354c64-ec5e-4e9a-b08c-a2564e4fc235)](https://pokedex-white.vercel.app/)
+[![pokedex](https://github.com/MatheusCarvie/pokedex/assets/89232821/f695c917-41e9-4504-a330-3f45ed610c2e)](https://pokedex-white.vercel.app/)
 
 [![Blog](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/matheuscarvie/)
 
